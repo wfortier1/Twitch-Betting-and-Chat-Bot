@@ -5,4 +5,5 @@ This is a personal project using node.js, MYSQL, the Stream Elements API, and th
 
 This is the first build and requires some tweaking as Stream Elements and Twitch update on their end so as of June 25th 2019 it does not add points correctly.
 
+The keys. is hiding actual usernames and passwords as well as personal access keys. I have not included that file.
 

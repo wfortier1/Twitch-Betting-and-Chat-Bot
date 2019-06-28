@@ -135,7 +135,7 @@ client.on("chat", function (channel, user, message, self) {
                 obj = JSON.parse(data);
                 userID = obj.data[0].id;
 
-            requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.twitchName + user.username;
+            requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.channelId + "/" + user.username;
             request.get(requestOptions,(error, response, data, numPoints, obj) => {
                 if(error) throw error;
                 obj = JSON.parse(data);
@@ -151,7 +151,7 @@ client.on("chat", function (channel, user, message, self) {
                 return;
             }
             if(numPoints < messageArray[1]){
-                client.say(keys.twitchName, "Bet failed. You only have " + numPoints + " points");
+                client.say(keys.twitchName, "Bet failed. You do not have enough points");
                     return;
             }
             else if(messageArray[1] === 0){

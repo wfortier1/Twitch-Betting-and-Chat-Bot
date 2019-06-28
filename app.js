@@ -267,7 +267,7 @@ client.on("chat", function (channel, user, message, self) {
                 for(var i = 0; i<(result.length);i++){
                     console.log(result[i].betPoints);
                     if(result[i].betPoints !== 0){
-                        requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.twitchName + "/" + user.username + "/" + result[i].betPoints;
+                        requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.channelId + "/" + user.username + "/" + result[i].betPoints;
                         request.put(requestOptions, function(error, response, body){
                             if(error) throw error;
                         });
@@ -291,7 +291,7 @@ client.on("chat", function (channel, user, message, self) {
                 var pointsSQL;
                 for(var i = 0; i<(result.length);i++){
                     if(result[i].betPoints !== 0){
-                        requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.twitchName + "/" + user.username + "/" + ((-1)*result[i].betPoints);
+                        requestOptions.url = "https://api.streamelements.com/kappa/v2/points/" + keys.channelId + "/" + user.username + "/" + ((-1)*result[i].betPoints);
                         request.put(requestOptions, function(error, response, body){
                             if(error) throw error;
                         });

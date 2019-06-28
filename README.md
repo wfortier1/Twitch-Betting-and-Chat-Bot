@@ -1,9 +1,9 @@
-# Twitch-Betting-and-Chat-Bot
+# Betting and Chat Bot for Twitch
 
 This is a personal project using node.js, MYSQL, the Stream Elements API, and the Twitch API
 
+The bot will manage bets and distribute the corresponding winnings based on the outcome of the event currently being wagered on
 
-This is the first build and requires some tweaking as Stream Elements and Twitch update on their end so as of June 25th 2019 it does not add points correctly.
 
-The keys. is hiding actual usernames and passwords as well as personal access keys. I have not included that file.
+
 
